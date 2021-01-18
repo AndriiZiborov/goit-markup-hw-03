@@ -42,6 +42,10 @@ margin: 0;
 }
 
 /* шапка сайта */
+.flex {
+  display: flex;
+}
+
 .list {
     list-style: none;
     padding: 0;
@@ -53,6 +57,7 @@ margin: 0;
 }
 
 .nav-site > a {
+ 
   color: var(--primary-text-color);
   font-family: Raleway, sans-serif;
 
@@ -63,26 +68,57 @@ margin: 0;
 }
 
 .nav-site a {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
     text-decoration: none;
+    
 }
 
 .nav-site {
-                outline: 1px solid tomato;
-                width: 1200px;
-                margin-left: auto;
-                margin-right: auto;
-
-
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-
+                /* outline: 1px solid tomato; */
+  display: flex;           
+ 
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
+.nav-site .container {
+  align-items: center;
+}
+
+.nav-site-link {
+  /* background-color: tomato; */
+  margin-right: 50px;
+}
+
+.nav-site-link:last-child,
+.nav-site-contacts:last-child {
+  margin-right: 0;
+}
+
+.nav-site-contacts {
+  /* background-color: teal; */
+  margin-right: 50px;
+}
+
+.block-contacts {
+  margin-left: 331px;
+  
+  
+}
+
+.block-links {
+  margin-left: 93px;
+  
+}
 .nav-site .link.current {
     color: var(--accent-color); 
 }
+
+
 
 .link {
     color: var(--primary-text-color);
@@ -98,25 +134,42 @@ letter-spacing: 0.02em;
     color: var(--second-text-color);
 }
 
+.nav-site .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 /* футер */
 
 footer {
-    margin-top: 94px;
     padding-top: 60px;
     padding-bottom: 60px;
+
     background-color: var(--dark-bg-color);
     color: var(--white-color);
   }
-  
-  footer a {
-    text-decoration: none;
+
+  .footer-contaier {
+    /* outline: 1px solid tomato; */
+
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
   }
   
+  footer a {
+    
+    text-decoration: none;
+  }
+
+  
+  
   .footer-logo {
-    margin-left: 215px;
+    margin-left: 15px;
+
     color: var(--white-color);
     font-family: Raleway, sans-serif;
-  
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -128,7 +181,7 @@ footer {
   
   address {
       margin-top: 20px;
-      margin-left: 215px;
+      margin-left: 15px;
       font-style: normal;
       font-size: 14px;
       line-height: 1.71;
@@ -146,19 +199,18 @@ footer {
 
 /* заказ услуги */
 .service-container {
-  background-color: var(--dark-bg-color);
   margin-top: 0;
-  text-align: center;
   padding-bottom: 200px;
   padding-top: 200px;
-  padding-left: 452px;
-  padding-right: 452px;
+  
+  background-color: var(--dark-bg-color);
+  text-align: center;
 }
 
 .service-title { 
   
   margin: 0;
-   
+  
   color: var(--white-color); 
 
   font-weight: 900;
@@ -169,12 +221,23 @@ footer {
   
   letter-spacing: 0.06em;
   text-transform: uppercase;
+   
+  
 }
+
 
 /* Soft skills */
 
 .softskills {
   margin-top: 94px ;
+}
+
+.softskill-item{
+  text-align: left;
+}
+
+.softskill-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .softskills-titles {
@@ -194,10 +257,13 @@ footer {
   line-height: 1.71;
 }
 
+
+/* Чем мы занимаемся */
+
+
 .activity-container {
   margin-top: 94px;
 }
-
 
 .title {
   margin-top: 0;
@@ -208,23 +274,49 @@ footer {
   text-align: center;
 }
 
+
+  .activity-container-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  
+
 /* Наша команда */
 .team {
   margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--primary-bg-color);
 }
+
+.team-item {
+  background-color: var(--white-color);
+}
+
+.team-item:not(:last-child) {
+  
+  margin-right: 30px;
+}
+
+
+
 .team-img {
+
   margin-top: 50px;
+  display: flex;
+  
+  
 }
 .team-members {
   margin-top: 30px;
   margin-bottom: 0;
+
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18px;
 }
 .specialty {
-  margin-top: 10px;
   margin-bottom: 0;
   color: var(--second-text-color);
   font-size: 16px;
@@ -289,6 +381,15 @@ footer {
 }
 
 /* список предложений */
+.offers {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.offers-text {
+  outline: 1px solid tomato;
+  margin: 20px 24px;
+}
 
 .offers h2 {
   color: var(--primary-text-color);
@@ -310,19 +411,27 @@ footer {
   text-decoration: none;
 }
 
+.offers-page {
+  margin-top: 34px;
+
+}
+
 /* размещение блоков */
 
 .container {
   outline: 1px solid tomato;
-  
+  /* display: inline-block; */
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
   
   width: 1200px;
   text-align: center;
 }
 
-
+.team-item:not(:last-child)
+{trst}
 
   
 
