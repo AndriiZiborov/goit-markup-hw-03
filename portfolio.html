@@ -13,42 +13,47 @@
 <body>
 
          <!--шапка сайта-->
- <header>
+         <header class="header">
     
-  <nav class="nav-site">
-    <a 
-      href="./index.html">  
-      <span class="logo">Web</span>Studio
-    </a>
-      <ul class="list">
-        <li>
-          <a class="link" href="./index.html" >
-             Студия
-          </a> 
-          </li>
-          <li>
-              <a class="link current" href="./portfolio.html" >
-                  Портфолио
-                </a>
-          </li>
-          <li>
-              <a class="link" href="" >
-                  Контакты
-                </a>
-          </li>
-        </ul>
-    
-  
-    <ul class="list">
-        <li>
-            <a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a> 
-        </li>   
-        <li>
-            <a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
-        </li>
-    </ul>
-  </nav>
-  </header>
+          <nav class="nav-site container">
+           
+              <a 
+                href="./index.html">  
+                <span class="logo">Web</span>Studio
+             </a>
+          
+              <ul class="block-links flex list">
+                <li class="nav-site-link">
+                   <a class="link" href="./index.html" >
+                     Студия
+                   </a> 
+                </li>
+          
+                <li class="nav-site-link">
+                      <a class="link current" href="./portfolio.html" >
+                          Портфолио
+                      </a>
+                </li>
+          
+                <li class="nav-site-link">
+                   <a class="link" href="" >
+                          Контакты
+                   </a>
+                 </li>
+              </ul>
+            
+          
+             <ul class="block-contacts flex list">
+                <li class="nav-site-contacts">
+                    <a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a> 
+                </li>   
+                <li class="nav-site-contacts">
+                    <a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+             </ul>
+          
+          </nav>
+          </header>
 
   <!--основной контент-->
   <main>
@@ -58,20 +63,20 @@
     <h1 hidden>Наши работы</h1>
 
    <!--кнопки фильтров-->
-   <ul class="list">
-    <li>
+   <ul class="offers-btn list flex">
+    <li class="offers-btn-item">
         <button class="button second" type="button" >Все</button>
     </li>
-    <li>
+    <li class="offers-btn-item">
         <button class="button second" type="button">Веб-сайты</button>
     </li>
-    <li>
+    <li class="offers-btn-item">
         <button class="button second" type="button">Приложения</button>
     </li>
-    <li>
+    <li class="offers-btn-item">
         <button class="button second" type="button">Дизайн</button>
     </li>
-    <li>
+    <li class="offers-btn-item">
         <button class="button second" type="button">Маркетинг</button>
     </li>
    </ul>
@@ -89,56 +94,64 @@
           </div>
        </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/neworlean.jpg" alt="Постер New Orlean vs Golden Star" width="370">
           <h2>Постер New Orlean vs Golden Star</h2>
           <p>Дизайн</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/seafood.jpg" alt="Ресторан Seafood" width="370">
           <h2>Ресторан Seafood</h2>
           <p>Приложение</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/project-prime.jpg" alt="Проект Prime" width="370">
           <h2>Проект Prime</h2>
           <p>Маркетинг</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/project-boxes.jpg" alt="Проект Boxes" width="370">
           <h2>Проект Boxes</h2>
           <p>Приложение</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/insperation.jpg" alt="Inspiration has no Borders" width="370">
           <h2>Inspiration has no Borders</h2>
           <p>Веб-сайт</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/limited-edition.jpg" alt="Издание Limited Edition" width="370">
           <h2>Издание Limited Edition</h2>
           <p>Дизайн</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/project-lab.jpg" alt="Проект LAB" width="370">
           <h2>Проект LAB</h2>
           <p>Маркетинг</p>
         </a>
       </li>
-      <li>
+
+      <li class="offers-page-element">
         <a href=""> 
           <img src="./img/growing-business.jpg" alt="Growing Business" width="370">
           <h2>Growing Business</h2>
