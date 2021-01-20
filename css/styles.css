@@ -76,7 +76,7 @@ margin: 0;
 }
 
 .nav-site {
-                /* outline: 1px solid tomato; */
+  /* outline: 1px solid tomato; */
   display: flex;           
  
   font-weight: 500;
@@ -150,12 +150,14 @@ footer {
     color: var(--white-color);
   }
 
-  .footer-contaier {
+  footer .container {
     /* outline: 1px solid tomato; */
 
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    text-align: left;
 
   }
   
@@ -167,8 +169,6 @@ footer {
   
   
   .footer-logo {
-    margin-left: 15px;
-
     color: var(--white-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -182,7 +182,6 @@ footer {
   
   address {
       margin-top: 20px;
-      margin-left: 15px;
       font-style: normal;
       font-size: 14px;
       line-height: 1.71;
