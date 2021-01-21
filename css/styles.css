@@ -52,6 +52,21 @@ margin: 0;
     margin: 0;
 }
 
+  /* "Тегу img задайте свойство display: block" Если я правильно понял что Вы имели ввиду */
+ img {
+    display: block;
+}
+
+.header {
+  
+  display: flex;
+  align-items: center;
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ececec;
+}
+
 .nav-logo {
     color: var(--primary-text-color);
 }
@@ -67,7 +82,7 @@ margin: 0;
   letter-spacing: 0.03em;
 }
 
-.nav-site a {
+.header a {
     display: block;
     padding-top: 24px;
     padding-bottom: 25px;
@@ -75,7 +90,8 @@ margin: 0;
     
 }
 
-.nav-site {
+.nav-site,
+.contacts {
   /* outline: 1px solid tomato; */
   display: flex;           
  
@@ -85,36 +101,31 @@ margin: 0;
   letter-spacing: 0.02em;
 }
 
-.nav-site .container {
-  align-items: center;
-}
-
 .nav-site-link {
   /* background-color: tomato; */
   margin-right: 50px;
 }
 
 .nav-site-link:last-child,
-.nav-site-contacts:last-child {
+.contacts-item:last-child {
   margin-right: 0;
 }
 
-.nav-site-contacts {
+.block-contacts {
+  margin-left: auto; 
+}
+
+.contacts-item {
   /* background-color: teal; */
   margin-right: 50px;
-  
 }
 
-.block-contacts {
-  margin-left: auto;
-  
-  
-}
+
 
 .block-links {
-  margin-left: 93px;
-  
+  margin-left: 93px;  
 }
+
 .nav-site .link.current {
     color: var(--accent-color); 
 }
@@ -125,8 +136,8 @@ margin: 0;
     color: var(--primary-text-color);
 }
 
-.nav-site .link:hover, 
-.nav-site .link:focus {
+.header .link:hover, 
+.header .link:focus {
 
     color: var(--accent-color);
 }
@@ -135,7 +146,7 @@ margin: 0;
     color: var(--second-text-color);
 }
 
-.nav-site .link {
+.header .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -151,24 +162,22 @@ footer {
     color: var(--white-color);
   }
 
-  footer .container {
-    /* outline: 1px solid tomato; */
-
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: left;
-
+  address {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
   }
-  
+
+  .adress-item {
+    display: block;
+    margin-top: 9px;
+  }
+
   footer a {
-    
     text-decoration: none;
   }
 
-  
-  
   .footer-logo {
     color: var(--white-color);
     font-family: Raleway, sans-serif;
@@ -181,20 +190,15 @@ footer {
       color: var(--accent-color);
   }
   
-  address {
-      margin-top: 20px;
-      font-style: normal;
-      font-size: 14px;
-      line-height: 1.71;
-  }
-  address > a {
-      color: var(--transparent-color);
+  address a {
+    color: var(--transparent-color);
   }
   
-  address > a:hover, 
-  address > a:focus  {
+  address a:hover, 
+  address a:focus  {
       color: var(--accent-color);
   }
+
 
 
 
@@ -229,7 +233,7 @@ footer {
 /* Soft skills */
 
 .softskills {
-  margin-top: 94px ;
+  padding-top: 94px ;
 }
 
 .softskill-item{
@@ -263,7 +267,8 @@ footer {
 
 
 .activity-container {
-  margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .title {
@@ -279,15 +284,13 @@ footer {
  
 }
 
-  .activity-container-item:not(:last-child) {
+.activity-container-item:not(:last-child) {
     margin-right: 30px;
-  }
-  
-  
+}
+
 
 /* Наша команда */
 .team {
-  margin-top: 94px;
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--primary-bg-color);
@@ -311,20 +314,25 @@ footer {
 }
 
 .team-text {
- margin-top: 30px; 
- margin-bottom: 30px;
- margin-left: auto;
- margin-right: auto;
+  /* outline: 1px solid tomato; */
+  padding-top: 30px; 
+  padding-bottom: 30px;
+
+  /* ВОПРОС: Вы сказали задать не большие горизонтальные паддинги, на макете 60слева и 59справа,
+  если сделать так то первое имя залазит друг на друга, можно ли задать по 30 ? */
+  padding-left: 30px;
+  padding-right: 30px;
+
+  /* ВОПРОС: нужны ли после горизонтальных паддингов марджин авто? Вы не говорили их убирать после первой проверки */
+  margin-left: auto;
+  margin-right: auto;
 
  text-align: center;
 }
 
 
-  
-  
-
 .team-members {
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 0;
 
   
@@ -334,8 +342,10 @@ footer {
 }
 
 .specialty {
+  /* ВОПРОС: переопределите у элемента верхний марджин (применяется дефолтный)
+  тут не понял что значит переопределить верхний марджин?  */
   margin-bottom: 0;
-
+  
   color: var(--second-text-color);
   font-size: 16px;
   line-height: 1.18;
@@ -402,11 +412,7 @@ footer {
 
 /* список предложений */
 .offers-btn {
-  /* background-color: tomato; */
-
-  width: 610px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center
 }
 
 .offers-btn-item:not(:last-child) {
@@ -415,18 +421,24 @@ margin-right: 8px;
 
 
 .offers {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .offers-text {
-  /* outline: 1px solid tomato; */
-  margin: 20px 24px;
+  
+  /* задал отдельно ширину этому контейнеру т.к. она почему-то тут была 368px
+  это было заметно при фокусе */
+  width: 370px;
+  padding: 20px 24px;
+  
+  
 }
 
 .offers h2 {
-  color: var(--primary-text-color);
+  margin: 0;
 
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -434,8 +446,9 @@ margin-right: 8px;
 }
 
 .offers p {
+    margin: 0;
+
     color: var(--second-text-color);
-    
     font-size: 16px;
     line-height: 1.87;
 }
@@ -444,10 +457,11 @@ margin-right: 8px;
   text-decoration: none;
 }
 
+
 .offers-page {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 34px;
+  margin-top: 50px;
 }
 
   .offers-page-element {

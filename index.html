@@ -14,9 +14,9 @@
 <body>
 
     <!--шапка сайта-->
- <header class="header">
+ <header class="header container">
     
-<nav class="nav-site container">
+<nav class="nav-site">
  
     <a 
       href="./index.html">  
@@ -42,18 +42,18 @@
          </a>
        </li>
     </ul>
-  
+   </nav>
 
    <ul class="block-contacts flex list">
-      <li class="nav-site-contacts">
+      <li class="contacts-item">
           <a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a> 
       </li>   
-      <li class="nav-site-contacts">
+      <li class="contacts-item">
           <a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
       </li>
    </ul>
 
-</nav>
+
 </header>
 
 <main>
@@ -101,7 +101,7 @@
         <h2 class="title">Чем мы занимаемся</h2>
         <ul class="flex list">
             <li class="activity-container-item">
-               <img src="./img/img.jpg" alt="програмирование" width="370">
+               <img class="img" src="./img/img.jpg" alt="програмирование" width="370">
             </li>
            <li class="activity-container-item">
                <img src="./img/img2.jpg" alt="разработка мобильных приложений" width="370">
@@ -152,18 +152,27 @@
 </main>
 
    <!--Футер-->
-   <footer>
+<footer>
 
-    <div class="container">
-        <a class="footer-logo" href="./index.html"><span class="logo">Web</span>Studio</a>
-      <address>
+  <div class="container">
+    <a class="footer-logo" href="./index.html"><span class="logo">Web</span>Studio</a>
+
+    <address>
+         
            г. Киев, пр-т Леси Украинки, 26 <br />
-         <a href="mailto:info@example.com">info@example.com</a> <br />
-         <a href="tel:+380991111111">+38 099 111 11 11</a>
-      </address>
-    </div>
+        
+       <ul class="list">
+           <li class="adress-item">
+             <a href="mailto:info@example.com">info@example.com</a> <br />
+          </li> 
+          <li class="adress-item">
+             <a href="tel:+380991111111">+38 099 111 11 11</a>
+          </li> 
+       </ul>
+    </address>
+  </div>
     
-   </footer>
+</footer>
 
 
   
