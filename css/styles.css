@@ -169,8 +169,18 @@ footer {
     line-height: 1.71;
   }
 
-  .adress-item {
+  .adress-item:not(:first-child) {
     display: block;
+    margin-top: 9px;
+  }
+
+  
+
+  .adress-contacts {
+    margin-top: 9px;
+  }
+
+  .adress-conrainer {
     margin-top: 9px;
   }
 
