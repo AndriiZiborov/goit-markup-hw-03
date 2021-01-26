@@ -9,19 +9,17 @@ html {
 }
 
 :root {
-    --primary-text-color: #212121; 
-    --accent-color: #2196F3;
-    --second-text-color: #757575; 
-    --primary-bg-color: #F5F4FA;
-    --medium-bg-color: #E5E5E5;
-    --dark-bg-color: #2F303A;
-    --transparent-color: rgba(255, 255, 255, 0.6);
-    --white-color: #ffffff;
+  --primary-text-color: #212121;
+  --accent-color: #2196f3;
+  --second-text-color: #757575;
+  --primary-bg-color: #f5f4fa;
+  --medium-bg-color: #e5e5e5;
+  --dark-bg-color: #2f303a;
+  --transparent-color: rgba(255, 255, 255, 0.6);
+  --white-color: #ffffff;
 }
 
-
-
-/* основной цвет текста #212121 */ 
+/* основной цвет текста #212121 */
 /* цвет вторичного текста #757575  */
 /* цвет акцента #2196F3 */
 /* темный цвет фона #2F303A */
@@ -30,15 +28,13 @@ html {
 /* белый цвет #FFFFFF */
 /* белый прозрачный rgba(255, 255, 255, 0.6 */
 
-
-
 body {
-background-color: #ffffff;
-color: var(--primary-text-color);
-font-family: Roboto, sans-serif;
-letter-spacing: 0.03em;
+  background-color: #ffffff;
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 
-margin: 0;
+  margin: 0;
 }
 
 /* шапка сайта */
@@ -47,18 +43,17 @@ margin: 0;
 }
 
 .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-  /* "Тегу img задайте свойство display: block" Если я правильно понял что Вы имели ввиду */
- img {
-    display: block;
+/* "Тегу img задайте свойство display: block" Если я правильно понял что Вы имели ввиду */
+img {
+  display: block;
 }
 
 .header {
-  
   display: flex;
   align-items: center;
 
@@ -68,11 +63,10 @@ margin: 0;
 }
 
 .nav-logo {
-    color: var(--primary-text-color);
+  color: var(--primary-text-color);
 }
 
 .nav-site > a {
- 
   color: var(--primary-text-color);
   font-family: Raleway, sans-serif;
 
@@ -83,18 +77,17 @@ margin: 0;
 }
 
 .header a {
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 25px;
-    text-decoration: none;
-    
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  text-decoration: none;
 }
 
 .nav-site,
 .contacts {
   /* outline: 1px solid tomato; */
-  display: flex;           
- 
+  display: flex;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -112,38 +105,61 @@ margin: 0;
 }
 
 .block-contacts {
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 .contacts-item {
   /* background-color: teal; */
   margin-right: 50px;
+  display: inline-flex;
+  align-items: center;
 }
 
+.contacts-item::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+}
 
+.envelope::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../img/envelope.svg);
+}
+
+.mobile::before {
+  background-image: url(../img/smartphone.svg);
+  width: 10px;
+  height: 16px;
+}
+
+/* .contacts-item:hover {
+  
+  color: var(--accent-color);
+  cursor: pointer;
+  background-image: url(../css/img/envelopehover.svg);
+  background-repeat: no-repeat;
+} */
 
 .block-links {
-  margin-left: 93px;  
+  margin-left: 93px;
 }
 
 .nav-site .link.current {
-    color: var(--accent-color); 
+  color: var(--accent-color);
 }
-
-
 
 .link {
-    color: var(--primary-text-color);
+  color: var(--primary-text-color);
 }
 
-.header .link:hover, 
+.header .link:hover,
 .header .link:focus {
-
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .contacts {
-    color: var(--second-text-color);
+  color: var(--second-text-color);
 }
 
 .header .link {
@@ -154,98 +170,88 @@ margin: 0;
 /* футер */
 
 footer {
-  
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    background-color: var(--dark-bg-color);
-    color: var(--white-color);
-  }
+  background-color: var(--dark-bg-color);
+  color: var(--white-color);
+}
 
-  address {
-    margin-top: 20px;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-  }
+address {
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
 
-  .adress-item:not(:first-child) {
-    display: block;
-    margin-top: 9px;
-  }
+.adress-item:not(:first-child) {
+  display: block;
+  margin-top: 9px;
+}
 
-  
-  .adress-contacts {
-    margin-top: 9px;
-  }
+.adress-contacts {
+  margin-top: 9px;
+}
 
-  .adress-conrainer {
-    margin-top: 9px;
-  }
+.adress-conrainer {
+  margin-top: 9px;
+}
 
-  footer a {
-    text-decoration: none;
-  }
+footer a {
+  text-decoration: none;
+}
 
-  .footer-logo {
-    color: var(--white-color);
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-  }
-  
-  .logo {
-      color: var(--accent-color);
-  }
-  
-  address a {
-    color: var(--transparent-color);
-  }
-  
-  address a:hover, 
-  address a:focus  {
-      color: var(--accent-color);
-  }
+.footer-logo {
+  color: var(--white-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
 
+.logo {
+  color: var(--accent-color);
+}
 
+address a {
+  color: var(--transparent-color);
+}
 
+address a:hover,
+address a:focus {
+  color: var(--accent-color);
+}
 
 /* заказ услуги */
 .service-container {
   margin-top: 0;
   padding-bottom: 200px;
   padding-top: 200px;
-  
+
   background-color: var(--dark-bg-color);
   text-align: center;
 }
 
-.service-title { 
+.service-title {
   margin: 0;
-  
-  color: var(--white-color); 
+
+  color: var(--white-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
 
-
-  
   letter-spacing: 0.06em;
   text-transform: uppercase;
-   
-  
 }
-
 
 /* Soft skills */
 
 .softskills {
-  padding-top: 94px ;
+  padding-top: 94px;
 }
 
-.softskill-item{
+.softskill-item {
   width: calc((100% - 90px) / 4);
   text-align: left;
 }
@@ -255,25 +261,58 @@ footer {
 }
 
 .softskills-titles {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 .softskills-text {
   margin-top: 10px;
   margin-bottom: 0;
-  color: var(--second-text-color);  
-  
+  color: var(--second-text-color);
+
   font-size: 14px;
   line-height: 1.71;
 }
 
+.softskill-item::before {
+  content: "";
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.antenna::before {
+  background-image: url(../img/antenna.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clock::before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/clock.svg);
+}
+
+.diagram::before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/diagram.svg);
+}
+
+.astronaut::before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/astronaut.svg);
+}
 
 /* Чем мы занимаемся */
-
 
 .activity-container {
   padding-top: 94px;
@@ -290,13 +329,11 @@ footer {
 }
 .activity-container-item {
   width: calc((100% - 60px) / 3);
- 
 }
 
 .activity-container-item:not(:last-child) {
-    margin-right: 30px;
+  margin-right: 30px;
 }
-
 
 /* Наша команда */
 .team {
@@ -306,7 +343,6 @@ footer {
 }
 
 .team-img {
-
   margin-top: 50px;
   display: flex;
 }
@@ -314,7 +350,8 @@ footer {
 .team-item {
   width: calc((100% - 90px) / 4);
   background-color: var(--white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -324,21 +361,15 @@ footer {
 
 .team-text {
   /* outline: 1px solid tomato; */
-  padding-top: 30px; 
+  padding-top: 30px;
   padding-bottom: 30px;
-
-  /* ВОПРОС: Вы сказали задать не большие горизонтальные паддинги, на макете 60слева и 59справа,
-  если сделать так то первое имя залазит друг на друга, можно ли задать по 30 ? */
-  padding-left: 30px;
-  padding-right: 30px;
-
-  /* ВОПРОС: нужны ли после горизонтальных паддингов марджин авто? Вы не говорили их убирать после первой проверки */
+  padding-left: 32px;
+  padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
 
- text-align: center;
+  text-align: center;
 }
-
 
 .team-members {
   margin: 0;
@@ -351,20 +382,40 @@ footer {
 .specialty {
   margin: 0;
   margin-top: 10px;
-  
-  
+
   color: var(--second-text-color);
   font-size: 16px;
   line-height: 1.18;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+}
 
+.social-links-item {
+  width: 44px;
+  height: 44px;
+  margin-top: 16px;
+  padding: 12px;
+  align-items: center;
+}
+.social-links-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links-item:hover,
+.social-links-item:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 /* стили кнопок */
 .button {
   border-radius: 4px;
   border: 1px solid transparent;
-  
+
   font-family: inherit;
   align-items: center;
   text-align: center;
@@ -372,20 +423,18 @@ footer {
   display: inline-block;
 }
 
-.first{
-    
-    padding: 10px 32px;
-    margin-top: 30px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+.first {
+  padding: 10px 32px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    color: var(--white-color);
-    background-color: var(--accent-color);
-    
+  color: var(--white-color);
+  background-color: var(--accent-color);
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;  
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 }
 
 .second {
@@ -393,39 +442,36 @@ footer {
 
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
-  
-  
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
- 
 }
 
-.button.second:hover, 
+.button.second:hover,
 .button.second:focus {
-    color: var(--white-color);
-    background-color: var(--accent-color);
-    cursor: pointer;
-  
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
 
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
 .button.first:hover {
-    color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
-    cursor: pointer;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  cursor: pointer;
 }
 
 /* список предложений */
 .offers-btn {
-  justify-content: center
+  justify-content: center;
 }
 
 .offers-btn-item:not(:last-child) {
-margin-right: 8px;
+  margin-right: 8px;
 }
-
 
 .offers {
   padding-top: 94px;
@@ -433,7 +479,6 @@ margin-right: 8px;
 }
 
 .offers-text {
-  
   /* задал отдельно ширину этому контейнеру т.к. она почему-то тут была 368px
   это было заметно при фокусе */
   width: 370px;
@@ -442,29 +487,26 @@ margin-right: 8px;
 
 .offers h2 {
   margin: 0;
-  
-  
 
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em
+  letter-spacing: 0.06em;
 }
 
 .offers p {
-    margin: 0;
-    margin-top: 4px;
+  margin: 0;
+  margin-top: 4px;
 
-    color: var(--second-text-color);
-    font-size: 16px;
-    line-height: 1.87;
+  color: var(--second-text-color);
+  font-size: 16px;
+  line-height: 1.87;
 }
 
 .offers a {
   text-decoration: none;
 }
-
 
 .offers-page {
   display: flex;
@@ -472,42 +514,53 @@ margin-right: 8px;
   margin-top: 50px;
 }
 
-  .offers-page-element {
-    width: calc((100% - 60px) / 3);
-    margin-right: 30px;
-    margin-bottom: 30px; 
+.offers-page-element {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
 
-    text-align: left;
-    border: 1px solid #EEEEEE;
-  }
+  text-align: left;
+  border: 1px solid #eeeeee;
+}
 
-  .offers-page-element:nth-child(3n) {
-    margin-right: 0;
-  }
+.offers-page-element:nth-child(3n) {
+  margin-right: 0;
+}
 
-  .offers-page-element:nth-last-child(-n + 3) {
-    margin-bottom: 0; 
-  } 
+.offers-page-element:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 
+/* постоянные клиенты */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
+.clients-list {
+  display: flex;
+}
+
+.clients-item {
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 /* контейнер для размера блоков */
 
 .container {
   /* outline: 1px solid tomato; */
-  
+
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  
 }
-
-
-  
-
-
-
-
-
