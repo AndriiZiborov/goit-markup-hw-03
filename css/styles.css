@@ -409,11 +409,8 @@ address a:focus {
   color: var(--color4, #afb1b8);
 }
 
-.social-links-item a {
-  height: 20px;
-}
-
 .social-links-icon {
+  display: block;
   align-items: center;
   fill: currentColor;
 }
@@ -423,14 +420,19 @@ address a:focus {
 }
 
 .social-links-item:hover {
-  color: white;
+  color: #ffffff;
 }
 
-.social-links-item:hover,
-.social-links-item:focus {
+.social-links-icon:hover,
+.social-links-icon:focus {
+  
   background-color: var(--accent-color);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.social-links-item a {
+  color: inherit;
 }
 
 /* стили кнопок */
@@ -575,10 +577,6 @@ address a:focus {
   border-radius: 4px;
 }
 
-.clients-item a {
-  height: 49px;
-}
-
 .clients-item:hover,
 .clients-item:focus {
   color: var(--accent-color);
@@ -591,7 +589,7 @@ address a:focus {
 }
 
 .clients-item-icon {
-  display: inline-block;
+  display: block;
   fill: currentColor;
 }
 
