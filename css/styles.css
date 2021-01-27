@@ -389,19 +389,41 @@ address a:focus {
 }
 
 .social-links {
+  
   display: flex;
   justify-content: center;
+  margin-top: 16px;
+  
+  
 }
 
 .social-links-item {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  margin-top: 16px;
-  padding: 12px;
-  align-items: center;
+  
+
+  color: var(--color4, #afb1b8);
 }
+
+.social-links-item a {
+  height: 20px;
+}
+
+.social-links-icon {
+  align-items: center;
+  fill: currentColor;
+}
+
 .social-links-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.social-links-item:hover {
+  color: white;
 }
 
 .social-links-item:hover,
@@ -544,14 +566,35 @@ address a:focus {
 .clients-item {
   width: 170px;
   height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  color: var(--color4, #afb1b8);
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+.clients-item a {
+  height: 49px;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .clients-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.clients-item-icon {
+  display: inline-block;
+  fill: currentColor;
+}
+
 
 /* контейнер для размера блоков */
 
